@@ -1,0 +1,32 @@
+<!-- 3) Find sum of digits of a number, make use of built-in method call(). -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      let sumOfDigits = {
+        getSum: function () {
+          return this.toString()
+            .split("") // Split number into individual digits
+            .map(Number) // Convert string digits to numbers
+            .reduce((sum, digit) => sum + digit, 0); // Sum all digits
+        },
+      };
+
+      let num = parseInt(prompt("Enter a number:"));
+
+      if (!isNaN(num)) {
+        let sum = sumOfDigits.getSum.call(num);
+        document.write(`Sum of digits in ${num} = ${sum}`);
+      } else {
+        document.write("Please enter a valid number.");
+      }
+    </script>
+  </body>
+</html>
