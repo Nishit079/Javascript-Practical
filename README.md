@@ -1,2 +1,2 @@
-#IT workshop (Javascript Practical)
+#IT workshop (JS Practical)
  
